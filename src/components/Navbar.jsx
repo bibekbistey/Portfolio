@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { CiMenuBurger } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io"; 
 import { Link, NavLink } from 'react-router-dom';
+import {motion} from "framer-motion"
 
 const Navbar = () => {
     const Nav=[
@@ -18,9 +19,13 @@ const Navbar = () => {
             path:"education"
         },
         {
+            name:"Projects",
+            path:"project"
+        },{
             name:"Contact Me",
             path:"contact"
         }
+
     ]
 
     const [menu,setMenu]=useState(false);
@@ -28,27 +33,28 @@ const Navbar = () => {
         setMenu(!menu)
     }
   return (
-    <div className='flex mx-auto justify-between border-b shadow-xl'>
+    <div className='flex mx-auto justify-between border-b shadow-md shadow-orange-500'>
         {/* left part */}
-        <div className='p-5 font-mono font-bold ml-9'>
-            <h1 className='text-2xl lg:text-3xl'>Bibek. B</h1>
-        </div>
+        <motion.div initial={{x:-100}} animate={{x:0}} transition={{duration:2}}
+         className='p-5 font-mono font-bold ml-9'>
+            <h1 className='text-2xl lg:text-3xl text-white'>Bibek. B</h1>
+        </motion.div>
         {/* {right part} */}
         <div className='p-5 mr-10'>
-        <ul className='md:flex gap-5 hidden'>
+        <motion.ul initial={{opacity:0}} animate={{opacity:1}} transition={{duration:2,delay:1}} className='md:flex gap-5 hidden text-white'>
             {Nav.map((n,index)=>
                 
-                <li className='font-mono font-bold hover:text-gray-500 scale-x-95 cursor-pointer'>
+                <li className='font-mono font-bold hover:text-gray-500 scale-x-95 cursor-pointer text-xl md:text-lg'>
                     <NavLink to={n.path} className={({isActive})=>isActive? "text-blue-400":""}>{n.name}</NavLink>
                     
                 </li>
             
             )}
-        </ul>
+        </motion.ul>
             
         </div>
 
-        <div className='p-5 md:hidden'>
+        <div className='p-5 md:hidden text-white'>
             {!menu?<CiMenuBurger className='w-20 h-7' onClick={toggleMenu} />:<IoMdClose className='w-20 h-7' onClick={toggleMenu} />} 
         </div>
 
@@ -58,7 +64,7 @@ const Navbar = () => {
             <ul className='mt-20 '>
                 {Nav.map((n,index)=>
                     
-                    <li className='font-mono font-bold hover:text-gray-500 scale-x-95 cursor-pointer mt-10 border-b border-gray-500'>
+                    <li className='font-mono font-bold hover:text-gray-500 scale-x-95 cursor-pointer mt-10 border-b border-gray-500 text-xl'>
                         <NavLink to={n.path} className={({isActive})=>isActive? "text-blue-400":""}onClick={() => setMenu(false)}>{n.name}</NavLink>
                         
                         

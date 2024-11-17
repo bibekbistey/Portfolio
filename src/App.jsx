@@ -8,6 +8,7 @@ import Contact from './components/Contact'
 const App = () => {
   return (
     <>
+    
       <Navbar></Navbar>
       <Hero></Hero>
       <Experience></Experience>

@@ -8,6 +8,7 @@ import Hero from './components/Hero.jsx'
 import Experience from './components/Experience.jsx'
 import Education from './components/Education.jsx'
 import Contact from './components/Contact.jsx'
+import Projects from './components/Projects.jsx'
 
 const router=createBrowserRouter(
   createRoutesFromElements(
@@ -15,6 +16,7 @@ const router=createBrowserRouter(
       <Route path='' element={<Hero></Hero>}/>
       <Route path="experience" element={<Experience></Experience>}/>
       <Route path='education' element={<Education></Education>}/>
+      <Route path='project' element={<Projects></Projects>}/>
       <Route path='contact' element={<Contact></Contact>}/>
     </Route>
 
