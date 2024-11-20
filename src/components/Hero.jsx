@@ -21,7 +21,7 @@ const Hero = () => {
                         appealing and user-friendly websites</motion.p>
                     {/* <div className='mt-4 px-3 py-3 w-32 bg-yellow-300 mx-auto rounded-lg cursor-pointer md:mx-0 text-red-600 shadow-xl font-mono hover:scale-105'>Download CV</div> */}
                     <motion.a initial={{x:-100, opacity:0}} animate={{x:0, opacity:1
-        }} transition={{duration:3,delay:1}} whileHover={{scale:2}} href="/cv.pdf" 
+        }} transition={{duration:3,delay:1}} whileHover={{scale:2}} href="/cv1.pdf" 
                         download="My_CV.pdf" 
                         className="px-3 py-3 w-32 bg-yellow-300 mx-auto rounded-lg cursor-pointer md:mx-0 text-red-600 shadow-xl font-mono hover:scale-105">
                          Download CV

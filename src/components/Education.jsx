@@ -44,14 +44,7 @@ const Education = () => {
 
                     </motion.div>
                 </div>
-            //     <div key={index} className='w-[70%] border border-black mx-auto mb-7 rounded-md shadow-xl bg-gradient-to-b from-gray-800 to-black lg:text-center hover:scale-105'> 
-            //         <h1 className='mx-3 font-serif capitalize text-red-300'>{edu.level}</h1>
-            //         <h1 className='mx-3 font-serif capitalize text-white'>{edu.name}</h1>
-            //         <h1 className='mx-3 font-serif text-orange-500'>{edu.year}</h1>
-            //         <h1 className='mx-3 font-serif text-white'>{edu.grades}</h1>
-            //         <h1 className='mx-3 font-serif text-white'>{edu.location}</h1>
-
-            // </div>
+           
             )}
             
         </div>
