@@ -14,7 +14,7 @@ const Projects = () => {
   const projects = [
     {
       name: "Rental Website",
-      image: jersey,
+      image: rental,
       link: "https://yourrentalhome.netlify.app/",
       description:
         "This is a completely responsive online rental frontend website which is created using React, Tailwindcss and Framer motion for animations",
@@ -103,7 +103,7 @@ const Projects = () => {
             <motion.img
               src={project.image}
               
-              className="h-[25vh] mt-1 mx-auto object-cover"
+              className="h-[25vh] rounded-lg p-1 mx-auto object-cover"
               whileHover={{ scale: 0.9 }}
             />
             <div className="text-white h-[21.5vh] p-3">
